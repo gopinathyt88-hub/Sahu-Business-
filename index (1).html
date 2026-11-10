@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sahu Business</title><meta name="theme-color" content="#000000"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root{--bg:#000;--card:#101010;--line:#2c2c2c;--tx:#fff;--mu:#9b9b9b;--gr:#22c55e;--rd:#ef4444;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans Oriya",sans-serif}
+html,body{background:var(--bg);color:var(--tx)}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.hide{display:none!important}
+#sp{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:99;transition:opacity .5s}
+#sp h1{font-size:1.7rem;font-weight:800;animation:in 1.8s ease-out forwards}
+@keyframes in{from{opacity:0;letter-spacing:.9em}to{opacity:1;letter-spacing:.2em}}
+.scr{max-width:480px;margin:0 auto;padding:18px 16px 120px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.top h2{font-size:1.3rem;letter-spacing:.14em}
+.sub{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;margin-bottom:16px}
+.sub h2{text-align:center;font-size:1.25rem}
+.ib{background:var(--card);border:1px solid var(--line);border-radius:10px;width:44px;height:44px;font-size:1.4rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.c{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:left;width:100%}
+.full{grid-column:1/-1}
+.l{font-size:.75rem;color:var(--mu);font-weight:600;letter-spacing:.04em}
+.v{font-size:1.7rem;font-weight:800;margin-top:6px}
+.gr{color:var(--gr)}.mu{color:var(--mu);font-weight:400;font-size:.8rem}
+.sm{font-size:.82rem;color:var(--mu);margin-top:4px}
+.ci{font-size:1.5rem;margin-bottom:6px}
+.fut{display:flex;justify-content:space-between;align-items:center;border:1.5px solid #fff;border-radius:14px;padding:18px;margin:4px 0 22px}
+.fut b{font-size:1.1rem}.fut .v{margin:0}
+h4{font-size:.8rem;color:var(--mu);margin-bottom:8px;letter-spacing:.04em}
+.rw{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.rc .rw{padding:10px 0;border-bottom:1px solid var(--line)}
+.rc small{color:var(--mu)}
+.sr{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px}
+.sr input{background:none;border:0;outline:0;color:#fff;width:100%;font-size:1rem}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tab{flex:1;padding:12px;border:1px solid var(--line);border-radius:10px;color:var(--mu);font-weight:600}
+.tab.on{background:#fff;color:#000;border-color:#fff}
+.list{display:flex;flex-direction:column;gap:10px}
+.bd{font-weight:700;border:1px solid #fff;border-radius:6px;padding:2px 8px;font-size:.9rem;white-space:nowrap}
+.bd.d{color:var(--gr);border-color:var(--gr)}
+.em{text-align:center;color:var(--mu);padding:40px 10px}
+.st{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;margin-bottom:14px}
+.st .v{font-size:1.3rem}
+.ol{border:1.5px solid #fff;border-radius:10px;padding:14px;width:100%;font-weight:700;margin-bottom:18px}
+.bt{padding:14px}
+.bt .rw+.rw{margin-top:10px}
+.acts{display:flex;gap:6px}
+.sb{background:#fff;color:#000;border-radius:8px;padding:8px 14px;font-weight:700}
+.ab{border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.ab.r{border-color:#7f1d1d;color:var(--rd)}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));background:#000;border-top:1px solid var(--line);display:flex;justify-content:center}
+.pb{background:#fff;color:#000;width:100%;max-width:480px;padding:15px;border-radius:12px;font-weight:800;font-size:1.05rem}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:flex-end;justify-content:center;z-index:50}
+.sh{background:#141414;border-top:1px solid var(--line);border-radius:18px 18px 0 0;width:100%;max-width:480px;padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px));max-height:90vh;overflow:auto}
+.sh .rw{margin-bottom:14px}.x{font-size:1.3rem;color:var(--mu)}
+.fd{margin-bottom:14px}.fd label{display:block;font-size:.8rem;color:var(--mu);margin-bottom:6px}
+.fd input,textarea{width:100%;background:#000;border:1px solid var(--line);border-radius:10px;padding:12px;color:#fff;font-size:1rem;outline:0}
+.fd input:focus,textarea:focus{border-color:#fff}
+.pvw{display:flex;justify-content:space-between;align-items:center;border:1px dashed var(--line);border-radius:10px;padding:12px;margin-bottom:14px}
+.er{color:var(--rd);font-size:.85rem;min-height:1.2em;margin-bottom:8px}
+.cf{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cf button{padding:13px;border-radius:10px;font-weight:700;border:1px solid var(--line)}
+.cf .go{background:var(--rd);border-color:var(--rd)}
+textarea{height:110px;font-size:.75rem;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.chips .tab{flex:none;padding:10px 14px}
+.br{margin-bottom:14px}.tr{height:6px;background:#1d1d1d;border-radius:3px;margin-top:6px}.tr i{display:block;height:100%;background:#fff;border-radius:3px}
+#tt{position:fixed;left:16px;right:16px;top:calc(12px + env(safe-area-inset-top,0px));background:#fff;color:#000;padding:12px;border-radius:10px;z-index:120;font-weight:600;text-align:center}
+button:disabled{opacity:.5}
+</style></head><body>
+
+<div id="sp"><h1>SAHU BUSINESS</h1></div>
+
+<main id="lg" class="scr hide" style="padding-top:12vh">
+  <h2 style="text-align:center;letter-spacing:.2em;font-size:1.5rem;margin-bottom:6px">SAHU BUSINESS</h2>
+  <p class="sm" style="text-align:center;margin-bottom:28px">Sign in with the shop login</p>
+  <div class="fd"><label>Email</label><input id="le" type="email" autocomplete="username" inputmode="email"></div>
+  <div class="fd"><label>Password</label><input id="lp" type="password" autocomplete="current-password"></div>
+  <div class="er" id="lerr"></div>
+  <button class="pb" style="max-width:none" id="lbtn" onclick="doLogin()">Sign in</button>
+</main>
+<div id="tt" class="hide"></div>
+
+<main id="dash" class="scr hide">
+  <div class="top"><div><h2>SAHU BUSINESS</h2><div class="sm" id="net"></div></div><button class="ib" onclick="openBackup()" aria-label="Backup">💾</button></div>
+  <button class="c hide" id="bkn" onclick="openBackup()" style="margin-bottom:12px"></button>
+  <div class="g2">
+    <button class="c" onclick="openReport('W')"><div class="l">This week</div><div class="v gr" id="wk">₹ 0</div><div class="sm">Tap for report ›</div></button>
+    <button class="c" onclick="openReport('M')"><div class="l">This month</div><div class="v gr" id="mo">₹ 0</div><div class="sm">Tap for report ›</div></button>
+  </div>
+  <div class="g2" id="cats"></div>
+  <div class="fut"><div><b>Future Profits</b><div class="sm">On all stock not yet sold</div></div><div class="v" id="ft">₹ 0</div></div>
+  <h4>RECENT SALES</h4><div class="rc" id="rc"></div>
+</main>
+
+<main id="mod" class="scr hide">
+  <div class="sub"><button class="ib" onclick="go('dash')">‹</button><h2 id="mt"></h2><span></span></div>
+  <div id="tools"><div class="sr"><input id="q" placeholder="🔍 Search product name..." oninput="renderMod()"></div>
+  <div class="tabs"><button class="tab on" id="ta" onclick="setTab('A')">Active Stock (<span id="na">0</span>)</button><button class="tab" id="ts" onclick="setTab('S')">Sold Out (<span id="ns">0</span>)</button></div></div>
+  <div class="list" id="pl"></div>
+  <div class="bar" id="bb"><button class="pb" onclick="openForm('new')">+ Add New Stock</button></div>
+</main>
+
+<main id="det" class="scr hide">
+  <div class="sub"><button class="ib" onclick="back('mod')">‹</button><h2 id="dt"></h2><span></span></div>
+  <div class="c st">
+    <div><div class="l">Active batches</div><div class="v" id="da">0</div></div>
+    <div><div class="l">Future profit</div><div class="v" id="df">₹ 0</div></div>
+    <div><div class="l">Realized</div><div class="v gr" id="dr">₹ 0</div></div>
+  </div>
+  <button class="ol" onclick="openForm('batch')">+ Add New Batch for This Item</button>
+  <h4>ALL BATCHES</h4><div class="list" id="bl"></div>
+</main>
+
+<main id="rep" class="scr hide">
+  <div class="sub"><button class="ib" onclick="go('dash')">‹</button><h2>Profit Report</h2><span></span></div>
+  <div class="chips" id="rch"></div>
+  <div class="g2 hide" id="rcu"><div class="fd"><label>From</label><input id="r1" type="date" onchange="setCustom()"></div><div class="fd"><label>To</label><input id="r2" type="date" onchange="setCustom()"></div></div>
+  <div id="rbody"></div>
+</main>
+
+<div id="fo" class="ov hide" onclick="if(event.target===this)show('fo',0)"><div class="sh">
+  <div class="rw"><h3 id="ftt"></h3><button class="x" onclick="show('fo',0)">✕</button></div>
+  <div class="fd" id="nf"><label>Product name</label><input id="fn" autocomplete="off" placeholder="Enter name" oninput="nameHint()"></div>
+  <div class="g2" id="sfl"><div class="fd"><label>Cost price per piece (₹)</label><input id="fc" type="number" inputmode="decimal" oninput="calcPrev()"></div><div class="fd"><label>Selling price per piece (₹)</label><input id="fs" type="number" inputmode="decimal" oninput="calcPrev()"></div></div>
+  <div class="fd hide" id="pf"><label>Profit per liter (₹)</label><input id="fp" type="number" inputmode="decimal" oninput="calcPrev()"></div>
+  <div class="fd"><label id="ql">Number of pieces</label><input id="fq" type="number" inputmode="decimal" oninput="calcPrev()"></div>
+  <div class="pvw"><span>Profit for this batch</span><b class="gr" id="fv">₹ 0</b></div>
+  <div class="er" id="er"></div>
+  <button class="pb" style="max-width:none" onclick="saveForm()">Save</button>
+</div></div>
+
+<div id="so" class="ov hide" onclick="if(event.target===this)show('so',0)"><div class="sh">
+  <div class="rw"><h3 id="stt"></h3><button class="x" onclick="show('so',0)">✕</button></div>
+  <div class="fd"><label id="sl"></label><input id="sq" type="number" inputmode="decimal"></div>
+  <div class="er" id="ser"></div>
+  <button class="pb" style="max-width:none" onclick="saveSell()">Save sale</button>
+</div></div>
+
+<div id="cfo" class="ov hide"><div class="sh">
+  <p id="cft" style="margin-bottom:18px;line-height:1.5"></p>
+  <div class="cf"><button onclick="show('cfo',0)">Cancel</button><button class="go" id="cfy">Yes</button></div>
+</div></div>
+
+<div id="bo" class="ov hide" onclick="if(event.target===this)show('bo',0)"><div class="sh">
+  <div class="rw"><h3>Backup &amp; Account</h3><button class="x" onclick="show('bo',0)">✕</button></div>
+  <p class="sm" id="bl2" style="margin:0 0 12px"></p>
+  <button class="pb" style="max-width:none;margin-bottom:10px" onclick="downloadBackup()">Save backup file</button>
+  <button class="ol" style="margin-bottom:12px" onclick="$('bf').click()">Restore from file</button>
+  <input id="bf" type="file" accept=".json,application/json" class="hide" onchange="pickFile(event)">
+  <textarea id="bt" placeholder="Or paste backup text here"></textarea>
+  <div class="cf"><button onclick="restoreAsk()">Restore</button><button onclick="signOutAsk()">Sign out</button></div>
+  <div class="sm" id="bm" style="margin-top:10px"></div>
+</div></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const K='sahu-business-v2',C={g:{n:'Grocery',t:'Grocery Inventory',i:'🛒'},o:{n:'Oils',t:'Oils',i:'⛽'},f:{n:'Fertilizer',t:'Fertilizer',i:'🌱'}};
+const FIX={o:['Petrol','Diesel'],f:['UREA','DAP','POTASH']};
+function uid(){return Math.random().toString(36).slice(2,10)}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function rs(n){return '₹ '+Math.round(n).toLocaleString('en-IN')}
+function fd(t){return new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short'})}
+function loadData(){return{p:[]}}
+let D=loadData(),cat,tab='A',pid,fm,ed,onYes;
+let snap=new Map();
+function save(){if(!window.cloud){toast('Not connected yet. Try again in a moment.');return}
+  const ids=new Set();
+  D.p.forEach(p=>{ids.add(p.id);const j=JSON.stringify(p);if(snap.get(p.id)!==j){snap.set(p.id,j);window.cloud.put(p)}});
+  [...snap.keys()].forEach(id=>{if(!ids.has(id)){snap.delete(id);window.cloud.del(id)}})}
+const cur=()=>D.p.find(p=>p.id===pid);
+const up=(b,c)=>c==='o'?b.ppl:b.sell-b.cost;
+const sold=b=>b.s.reduce((a,x)=>a+x.q,0);
+const rem=b=>b.qty-sold(b);
+const P=c=>D.p.filter(p=>p.cat===c).sort((a,b)=>FIX[c]?FIX[c].indexOf(a.name)-FIX[c].indexOf(b.name):a.name.localeCompare(b.name));
+const fut=p=>p.b.reduce((a,b)=>a+rem(b)*up(b,p.cat),0);
+const rl=(p,since)=>p.b.reduce((a,b)=>a+b.s.filter(x=>x.at>=since).reduce((m,x)=>m+x.q*up(b,p.cat),0),0);
+const unit=c=>c==='o'?' L':' pcs';
+function show(id,on){$(id).classList.toggle('hide',!on)}
+let scr='dash';
+function renderCurrent(){if(scr==='dash')renderDash();if(scr==='mod')renderMod();if(scr==='det')renderDet();if(scr==='rep')renderRep()}
+function go(s){scr=s;['dash','mod','det','rep'].forEach(i=>show(i,i===s));window.scrollTo(0,0);if(s==='dash')renderDash();if(s==='mod')renderMod();if(s==='det')renderDet();if(s==='rep')renderRep()}
+function openCat(c){cat=c;tab='A';keep=null;$('q').value='';go('mod')}
+let keep=null;
+function openProd(id){keep=window.scrollY;pid=id;go('det')}
+function back(s){go(s);if(s==='mod'&&keep!=null){const y=keep;keep=null;setTimeout(()=>window.scrollTo(0,y),0)}}
+function setTab(t){tab=t;renderMod()}
+
+function renderDash(){
+  const n=new Date(),wk=new Date(n.getFullYear(),n.getMonth(),n.getDate()-(n.getDay()+6)%7).getTime(),mo=new Date(n.getFullYear(),n.getMonth(),1).getTime();
+  const R=s=>D.p.reduce((a,p)=>a+rl(p,s),0);
+  $('wk').textContent=rs(R(wk));$('mo').textContent=rs(R(mo));
+  $('ft').textContent=rs(D.p.reduce((a,p)=>a+fut(p),0));
+  const lb=+localStorage.getItem('sahu-lastbackup')||0,dd=Math.floor((Date.now()-lb)/864e5),bn=$('bkn');
+  bn.classList.toggle('hide',!!(lb&&dd<7));bn.textContent=lb?'💾 Last backup '+dd+' days ago. Tap to back up.':'💾 No backup file yet. Tap to save one.';
+  $('cats').innerHTML=Object.keys(C).map(c=>{const ps=P(c);
+    return `<button class="c ${c==='f'?'full':''}" onclick="openCat('${c}')"><div class="ci">${C[c].i}</div><div class="l">${C[c].n} <span class="mu">this month</span></div><div class="v gr">${rs(ps.reduce((a,p)=>a+rl(p,mo),0))}</div><div class="sm">Future ${rs(ps.reduce((a,p)=>a+fut(p),0))}</div></button>`}).join('');
+  const rc=[];D.p.forEach(p=>p.b.forEach(b=>b.s.forEach(x=>rc.push({n:p.name,q:x.q,at:x.at,pr:x.q*up(b,p.cat),u:unit(p.cat)}))));
+  rc.sort((a,b)=>b.at-a.at);
+  $('rc').innerHTML=rc.length?rc.slice(0,5).map(r=>`<div class="rw"><span>${esc(r.n)} <small>× ${r.q}${r.u} · ${fd(r.at)}</small></span><b class="gr">+${rs(r.pr)}</b></div>`).join(''):'<div class="sm">No sales yet. Tap Sold on a batch to see it here.</div>';
+}
+
+function renderMod(){
+  const fx=!!FIX[cat],q=$('q').value.trim().toLowerCase();
+  $('mt').textContent=C[cat].t;show('tools',!fx);show('bb',!fx);
+  const ps=P(cat).filter(p=>p.name.toLowerCase().includes(q));
+  const A=ps.filter(p=>p.b.some(b=>rem(b)>0)),S=ps.filter(p=>p.b.length&&!A.includes(p));
+  $('na').textContent=A.length;$('ns').textContent=S.length;
+  $('ta').classList.toggle('on',tab==='A');$('ts').classList.toggle('on',tab==='S');
+  const L=fx?ps:tab==='A'?A:S;
+  $('pl').innerHTML=L.length?L.map(p=>{const a=p.b.filter(b=>rem(b)>0).length,sd=!fx&&tab==='S';
+    return `<button class="c" onclick="openProd('${p.id}')"><div class="rw"><b>${esc(p.name)} <span class="mu">(${a} active)</span></b><span class="bd ${sd?'d':''}">+${rs(sd?rl(p,0):fut(p))}</span></div><div class="sm rw"><span>Tap to open batches</span><span>›</span></div></button>`}).join('')
+    :`<div class="em">${tab==='A'?'No active stock. Tap + Add New Stock to begin.':'Nothing sold out yet.'}</div>`;
+}
+
+function renderDet(){
+  const p=cur();if(!p)return go('mod');const f=p.cat==='o';
+  $('dt').textContent=p.name;
+  $('da').textContent=p.b.filter(b=>rem(b)>0).length;$('df').textContent=rs(fut(p));$('dr').textContent=rs(rl(p,0));
+  $('bl').innerHTML=[...p.b].sort((a,b)=>b.n-a.n).map(b=>{
+    const r=rem(b),sd=sold(b),done=r<=0,last=b.s.length?b.s[b.s.length-1].at:0;
+    const info=f?`<b>${b.qty} L</b> × <b>₹${b.ppl}/L</b>`:`Cost <b>${rs(b.cost)}</b> · Sell <b>${rs(b.sell)}</b> × <b>${b.qty}</b>`;
+    return `<div class="c bt"><div class="rw"><span><b>Batch #${b.n}</b> <span class="mu">${done?'Sold: '+fd(last):'Added: '+fd(b.at)}</span></span><span class="bd ${done?'d':''}">+${rs(b.qty*up(b,p.cat))}</span></div>
+    <div class="sm">${info}</div>
+    ${sd>0&&!done?`<div class="sm">Sold ${sd} of ${b.qty} · ${r} left · earned ${rs(sd*up(b,p.cat))}</div>`:''}
+    <div class="rw"><span class="acts">${done?'':`<button class="sb" onclick="openSell('${b.id}')">✓ Sold</button>`}${sd>0?`<button class="ab" onclick="undoAsk('${b.id}')">↩</button>`:''}</span>
+    <span class="acts"><button class="ab" onclick="openForm('edit','${b.id}')">✏️</button><button class="ab r" onclick="delAsk('${b.id}')">🗑️</button></span></div></div>`}).join('')
+    ||'<div class="em">No batches yet. Tap + Add New Batch above.</div>';
+}
+
+/* profit report */
+let rp='M',rf,rt;
+const ds=t=>{const d=new Date(t);return new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()};
+const iso=t=>{const d=new Date(t);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const fy=t=>new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+function rangeOf(k){const n=new Date(),y=n.getFullYear(),m=n.getMonth(),d=n.getDate(),end=new Date(y,m,d,23,59,59,999).getTime();
+  if(k==='W')return[new Date(y,m,d-(n.getDay()+6)%7).getTime(),end];
+  if(k==='M')return[new Date(y,m,1).getTime(),end];
+  if(k==='L')return[new Date(y,m-1,1).getTime(),new Date(y,m,0,23,59,59,999).getTime()];
+  if(k==='Q')return[new Date(y,m-2,1).getTime(),end];
+  if(k==='Y')return[new Date(y,0,1).getTime(),end];
+  return[rf,rt]}
+function openReport(k){rp=k;go('rep')}
+function setRep(k){rp=k;if(k==='C'){if(!rf){[rf,rt]=rangeOf('M')}$('r1').value=iso(rf);$('r2').value=iso(rt)}renderRep()}
+function setCustom(){if($('r1').value)rf=new Date($('r1').value+'T00:00:00').getTime();if($('r2').value)rt=new Date($('r2').value+'T23:59:59.999').getTime();renderRep()}
+function barRow(l,v,mx){return `<div class="br"><div class="rw"><span>${l}</span><b class="gr">${rs(v)}</b></div><div class="tr"><i style="width:${mx>0?Math.max(2,v/mx*100):0}%"></i></div></div>`}
+function renderRep(){
+  const L={W:'This week',M:'This month',L:'Last month',Q:'Last 3 months',Y:'This year',C:'Custom'};
+  $('rch').innerHTML=Object.keys(L).map(k=>`<button class="tab ${rp===k?'on':''}" onclick="setRep('${k}')">${L[k]}</button>`).join('');
+  show('rcu',rp==='C');
+  const[s,e0]=rangeOf(rp),e=Math.min(e0,Date.now());
+  if(!(s<=e)){$('rbody').innerHTML='<div class="em">Pick a start date that is on or before the end date, and not in the future.</div>';return}
+  const days=Math.max(1,Math.round((ds(e)-ds(s))/864e5)+1);
+  let tot=0;const ct={g:0,o:0,f:0},pr={},bk={};
+  D.p.forEach(p=>p.b.forEach(b=>b.s.forEach(x=>{if(x.at<s||x.at>e)return;
+    const v=x.q*up(b,p.cat),d=new Date(x.at),k=days<=31?ds(x.at):new Date(d.getFullYear(),d.getMonth(),1).getTime();
+    tot+=v;ct[p.cat]+=v;pr[p.name]=(pr[p.name]||0)+v;bk[k]=(bk[k]||0)+v})));
+  let keys;
+  if(days<=31)keys=Object.keys(bk).map(Number).sort((a,b)=>b-a);
+  else{keys=[];const a=new Date(s),z=new Date(e);for(let d=new Date(a.getFullYear(),a.getMonth(),1);d<=z;d=new Date(d.getFullYear(),d.getMonth()+1,1))keys.push(d.getTime());keys.reverse()}
+  const mx=Math.max(0,...keys.map(k=>bk[k]||0));
+  const lab=k=>days<=31?fd(k):new Date(k).toLocaleDateString('en-GB',{month:'short',year:'numeric'});
+  const tp=Object.entries(pr).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  $('rbody').innerHTML=`<div class="c"><div class="l">Total profit · ${fy(s)} – ${fy(e)}</div><div class="v gr" style="font-size:2.3rem">${rs(tot)}</div><div class="sm">${days} day${days>1?'s':''}</div></div>
+  <div class="g2" style="margin-top:12px"><div class="c"><div class="l">Average per month</div><div class="v">${rs(tot/(days/30.4))}</div></div><div class="c"><div class="l">Average per day</div><div class="v">${rs(tot/days)}</div></div></div>
+  <h4 style="margin-top:8px">BY CATEGORY</h4>${Object.keys(C).map(c=>barRow(C[c].n,ct[c],Math.max(...Object.values(ct)))).join('')}
+  <h4>${days<=31?'BY DAY':'BY MONTH'}</h4>${keys.length?keys.map(k=>barRow(lab(k),bk[k]||0,mx)).join(''):'<div class="sm" style="margin-bottom:14px">No sales in this period.</div>'}
+  <h4>TOP PRODUCTS</h4>${tp.length?tp.map(t=>barRow(esc(t[0]),t[1],tp[0][1])).join(''):'<div class="sm">No sales in this period.</div>'}`;
+}
+
+/* sell some / all */
+let sellB;
+function openSell(bid){const p=cur();sellB=p.b.find(b=>b.id===bid);const r=rem(sellB),u=unit(p.cat).trim();
+  $('stt').textContent='Sold: '+p.name+' (Batch #'+sellB.n+')';
+  $('sl').textContent='How many '+(u==='L'?'liters':'pieces')+' sold? ('+r+' left)';
+  $('sq').value=r;$('ser').textContent='';show('so',1)}
+function saveSell(){sellB=cur().b.find(b=>b.id===sellB.id);if(!sellB){show('so',0);return renderDet()}const q=+$('sq').value,r=rem(sellB);
+  if(!(q>0)||q>r){$('ser').textContent='Enter a number from 1 to '+r+'.';return}
+  sellB.s.push({q,at:Date.now()});save();show('so',0);renderDet()}
+
+/* confirm box */
+function confirmBox(txt,label,fn){$('cft').innerHTML=txt;$('cfy').textContent=label;onYes=fn;show('cfo',1)}
+$('cfy').onclick=()=>{show('cfo',0);if(onYes)onYes()};
+function delAsk(bid){const p=cur(),b=p.b.find(x=>x.id===bid);
+  confirmBox(`Delete <b>Batch #${b.n}</b> of <b>${esc(p.name)}</b>? This cannot be undone.`,'Delete',()=>{
+    p.b=p.b.filter(x=>x.id!==bid);
+    if(!p.b.length&&!FIX[p.cat]){D.p=D.p.filter(x=>x.id!==p.id);save();go('mod')}else{save();renderDet()}})}
+function undoAsk(bid){const p=cur(),b=p.b.find(x=>x.id===bid),l=b.s[b.s.length-1];
+  confirmBox(`Undo the last sale of <b>${l.q}${unit(p.cat)}</b> from Batch #${b.n}?`,'Undo sale',()=>{b.s.pop();save();renderDet()})}
+
+/* add / edit form */
+function openForm(mode,bid){fm=mode;const p=mode==='new'?null:cur(),c=p?p.cat:cat,f=c==='o';
+  ed=bid?p.b.find(b=>b.id===bid):null;
+  $('ftt').textContent=mode==='new'?'New Stock Entry':mode==='edit'?'Edit Batch #'+ed.n:'New Batch: '+p.name;
+  show('nf',mode==='new');show('sfl',!f);show('pf',f);
+  $('sfl').style.display=f?'none':'';
+  $('ql').textContent=f?'Total liters (L)':'Number of pieces';
+  const last=mode==='batch'&&p.b.length?[...p.b].sort((a,b)=>b.n-a.n)[0]:null,sr=ed||last;
+  $('fn').value='';$('fc').value=sr&&!f?sr.cost:'';$('fs').value=sr&&!f?sr.sell:'';$('fp').value=sr&&f?sr.ppl:'';$('fq').value=ed?ed.qty:'';
+  $('er').textContent='';calcPrev();show('fo',1);
+  if(mode==='new')setTimeout(()=>$('fn').focus(),150)}
+function calcPrev(){const c=fm==='new'?cat:cur().cat,q=+$('fq').value||0;
+  const u=c==='o'?(+$('fp').value||0):(+$('fs').value||0)-(+$('fc').value||0);$('fv').textContent=rs(u*q)}
+function saveForm(){const c=fm==='new'?cat:cur().cat,f=c==='o',q=+$('fq').value,name=$('fn').value.trim();
+  const v=f?{ppl:+$('fp').value}:{cost:+$('fc').value,sell:+$('fs').value};
+  const miss=!(q>0)||(f?$('fp').value==='':$('fc').value===''||$('fs').value==='');
+  if(fm==='new'&&!name){$('er').textContent='Enter the product name.';return}
+  if(miss){$('er').textContent='Fill every field with a number.';return}
+  if(fm==='edit'){ed=cur().b.find(b=>b.id===ed.id);if(!ed){show('fo',0);return renderDet()}if(q<sold(ed)){$('er').textContent='Quantity cannot be less than already sold ('+sold(ed)+').';return}
+    Object.assign(ed,{qty:q},v);save();show('fo',0);return renderDet()}
+  let p;
+  if(fm==='new'){p=P(cat).find(x=>x.name.toLowerCase()===name.toLowerCase());
+    if(!p){p={id:uid(),cat,name,b:[]};D.p.push(p)}pid=p.id}else p=cur();
+  p.b.push({id:uid(),n:Math.max(0,...p.b.map(b=>b.n))+1,at:Date.now(),qty:q,s:[],...v});
+  save();show('fo',0);go('det')}
+
+function nameHint(){if(fm!=='new'||$('fc').value||$('fs').value)return;
+  const n=$('fn').value.trim().toLowerCase(),p=P(cat).find(x=>x.name.toLowerCase()===n);
+  if(p&&p.b.length){const l=[...p.b].sort((a,b)=>b.n-a.n)[0];$('fc').value=l.cost;$('fs').value=l.sell;calcPrev()}}
+/* backup, account, start */
+function openBackup(){const lb=+localStorage.getItem('sahu-lastbackup')||0;
+  $('bl2').textContent=(lb?'Last backup file: '+fy(lb)+'. ':'No backup file saved yet. ')+'Your data is also saved online and syncs to every phone signed in.';
+  $('bt').value='';$('bm').textContent='';show('bo',1)}
+function downloadBackup(){const t=JSON.stringify({v:2,at:Date.now(),p:D.p},null,1),a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([t],{type:'application/json'}));a.download='sahu-backup-'+iso(Date.now())+'.json';
+  document.body.appendChild(a);a.click();a.remove();localStorage.setItem('sahu-lastbackup',Date.now());
+  $('bm').textContent='Backup file saved on your phone (see Downloads). Keep a copy in Google Drive or WhatsApp.';renderDash()}
+function pickFile(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{$('bt').value=r.result;$('bm').textContent='File loaded. Tap Restore to continue.'};r.readAsText(f);e.target.value=''}
+function normBackup(d){const m=new Map();
+  (d.p||[]).forEach(p=>{if(!p||!C[p.cat]||!p.name)return;const id=FIX[p.cat]?p.cat+'-'+p.name.toLowerCase():(p.id||uid());
+    const o=m.get(id)||{id,cat:p.cat,name:p.name,b:[]};o.b=o.b.concat((p.b||[]).map(b=>({...b,s:b.s||[]})));m.set(id,o)});
+  for(const c in FIX)FIX[c].forEach(n=>{const id=c+'-'+n.toLowerCase();if(!m.has(id))m.set(id,{id,cat:c,name:n,b:[]})});
+  return [...m.values()]}
+function restoreAsk(){let d;try{d=JSON.parse($('bt').value)}catch(e){}
+  if(!d||!Array.isArray(d.p)){$('bm').textContent='Choose a backup file or paste valid backup text first.';return}
+  const list=normBackup(d);
+  confirmBox('Replace ALL current data, on every phone, with this backup?','Restore',()=>{
+    window.cloud.replaceAll(list).then(()=>{show('bo',0);toast('Backup restored')}).catch(e=>toast('Restore failed: '+(e.code||e.message)))})}
+function signOutAsk(){confirmBox('Sign out on this phone? You will need the shop login to sign in again.','Sign out',()=>{show('bo',0);window.cloud.logout()})}
+function toast(m){const t=$('tt');t.textContent=m;t.classList.remove('hide');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.add('hide'),4000)}
+
+let authUser,splashDone=false;
+function maybeStart(){if(!splashDone)return;['dash','mod','det','rep'].forEach(i=>show(i,0));if(authUser){show('lg',0);go('dash')}else show('lg',1)}
+window.onAuth=u=>{authUser=u;maybeStart()};
+window.setData=list=>{D.p=list;snap=new Map(list.map(p=>[p.id,JSON.stringify(p)]));if(authUser&&splashDone)renderCurrent()};
+function netLabel(){const n=$('net');if(n)n.textContent=navigator.onLine?'● Online · synced':'● Offline · will sync later'}
+addEventListener('online',netLabel);addEventListener('offline',netLabel);netLabel();
+setTimeout(()=>{$('sp').style.opacity=0;setTimeout(()=>{show('sp',0);splashDone=true;maybeStart()},500)},2300);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import {initializeFirestore,persistentLocalCache,persistentMultipleTabManager,collection,doc,setDoc,deleteDoc,onSnapshot,writeBatch,getDocs} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyDNzZvf9d5pXl4AU_FJfni-NsXIXJnK25M",authDomain:"sahu-business.firebaseapp.com",projectId:"sahu-business",storageBucket:"sahu-business.firebasestorage.app",messagingSenderId:"827365769426",appId:"1:827365769426:web:c4b5583e2702100525ad0b"});
+const auth=getAuth(app);
+const db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()})});
+const col=collection(db,'products');
+const FIXM={o:['Petrol','Diesel'],f:['UREA','DAP','POTASH']};
+const seeded=new Set();let unsub=null;
+const clean=p=>JSON.parse(JSON.stringify(p));
+window.cloud={
+  put:p=>setDoc(doc(col,p.id),clean(p)).catch(e=>window.toast('Save failed: '+e.code)),
+  del:id=>deleteDoc(doc(col,id)).catch(e=>window.toast('Delete failed: '+e.code)),
+  logout:()=>signOut(auth),
+  replaceAll:async list=>{const s=await getDocs(col),keep=new Set(list.map(p=>p.id)),ops=[];
+    s.docs.forEach(d=>{if(!keep.has(d.id))ops.push(['d',d.id])});list.forEach(p=>ops.push(['s',p.id,clean(p)]));
+    for(let i=0;i<ops.length;i+=400){const wb=writeBatch(db);
+      ops.slice(i,i+400).forEach(o=>o[0]==='d'?wb.delete(doc(col,o[1])):wb.set(doc(col,o[1]),o[2]));await wb.commit()}}
+};
+window.doLogin=async()=>{const g=i=>document.getElementById(i),e=g('le').value.trim(),p=g('lp').value,er=g('lerr'),b=g('lbtn');
+  er.textContent='';if(!e||!p){er.textContent='Enter email and password.';return}
+  b.disabled=true;b.textContent='Signing in...';
+  try{await signInWithEmailAndPassword(auth,e,p)}catch(x){er.textContent=x.code==='auth/network-request-failed'?'No internet. Connect once to sign in.':'Wrong email or password.'}
+  b.disabled=false;b.textContent='Sign in'};
+onAuthStateChanged(auth,u=>{
+  if(unsub){unsub();unsub=null}
+  window.onAuth(!!u);
+  if(!u){window.setData([]);return}
+  unsub=onSnapshot(col,s=>{
+    const list=s.docs.map(d=>{const x=d.data();return {...x,id:d.id,b:(x.b||[]).map(b=>({...b,s:b.s||[]}))}});
+    window.setData(list);
+    const have=new Set(list.map(p=>p.id));
+    for(const c in FIXM)FIXM[c].forEach(n=>{const id=c+'-'+n.toLowerCase();
+      if(!have.has(id)&&!seeded.has(id)){seeded.add(id);setDoc(doc(col,id),{id,cat:c,name:n},{merge:true}).catch(()=>seeded.delete(id))}})
+  },e=>window.toast('Cannot load data: '+e.code));
+});
+</script></body></html>
